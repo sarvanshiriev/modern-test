@@ -1,0 +1,26 @@
+.header__container {
+    width: 320px;
+    padding: 0 $padding-mobile;
+    margin: 0 auto;
+}
+.header__navigation-image {
+    width: 168px;
+    height: 32px;
+    content: url('images/src/logo-desktop.png');
+}
+.header__navigation-button {
+    width: 35px;
+    height: 35px;
+    background-color: $blue;
+}
+.header__navigation-item {
+    font-family: 'Arial',sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: $text;
+    @media (min-width: $tablet-width) {
+        font-size: 14px;
+    }    
+}

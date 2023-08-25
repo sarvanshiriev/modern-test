@@ -1,0 +1,24 @@
+// Colors
+$blue: #009EE8;
+$sky: #CFEFFF;
+$gradient:linear-gradient(270deg, #E3EEFA 59.35%, rgba(227, 238, 250, 0.00) 100%), linear-gradient(90deg, #E3EEFA 33.22%, rgba(227, 238, 250, 0.00) 100%), url(<path-to-image>), lightgray 333.054px -9.515px / 71.042% 106.479% no-repeat;
+$red: #EF5C53;
+$dark-blue:#0887CC;
+$yellow:#FFF3C4;
+$grey:#B3B3B3;
+$white:#FFFFFF;
+$brown:#45332D;
+$burger-blue:#005898;
+$text:#4D4D4D;
+
+// Paddings
+$padding-mobile: 17px;
+$padding-tablet: 25px;
+$padding-desktop: 280px;
+
+// View-ports
+$mobile-width-only: 767px;
+$tablet-width-only: 1439px;
+$mobile-width: 360px;
+$tablet-width: 768px;
+$desktop-width: 1440px;
