@@ -3,6 +3,14 @@
     padding: 14px $padding-mobile 0 $padding-mobile;
     margin: 0 auto;
     border: 1px solid red;
+    @media (min-width: $tablet-width) {
+        width: 768px;
+        padding: 16px $padding-tablet 0 $padding-tablet;
+    }
+    @media (min-width: $desktop-width) {
+        width: 1920px;
+        padding: 24px $padding-desktop 0 $padding-desktop;
+    }
 }
 .header__navigation {
     position: relative;
@@ -17,12 +25,39 @@
 .header__navigation-image {
     width: 168px;
     height: 32px;
-    @media (min-width: $desktop-width) {
-    content: url('images/src/logo-desktop.png');
+    content: url('/images/logo-mobile.jpg'); 
+    @media (min-width: $tablet-width) {
+    content: url('/images/logo-tablet.jpeg'); 
+    width: 205px;
+    height: 57px;   
     }
+    @media (min-width: $desktop-width) {
+    content: url('/images/logo-desktop.png');
+    width: 408px;
+    height: 49px; 
+    }
+}
+.header__navigation-search {
+    @media (min-width: $tablet-width) {
+    display: flex;
+    margin-top: 25px;
+    }
+    @media (min-width: $desktop-width) {
+        margin-top: 0;
+        }
 }
 .header__navigation-txt {
     display: none;
+    @media (min-width: $tablet-width) {
+        display: block;
+        width: 317px;
+        height: 32px;
+        border: 1px solid $grey;
+    }
+    @media (min-width: $desktop-width) {
+        width: 234px;
+        height: 32px;
+    }
 }
 .header__navigation-button {
     width: 35px;
@@ -30,6 +65,10 @@
     background-color: $blue;
     display: block;
     padding: 8px;
+    @media (min-width: $tablet-width) {
+        width: 32px;
+        height: 32px;
+    }
 }
 .header__navigation-item {
     font-family: 'Arial',sans-serif;
@@ -40,14 +79,68 @@
     color: $text;
     @media (min-width: $tablet-width) {
         font-size: 14px;
-    }    
+    } 
+    @media (min-width: $desktop-width) {
+        font-size: 16px;
+        margin: auto 0;
+    }     
+}
+.header__navigation-item:nth-child(2) {
+    @media (min-width: $tablet-width) {
+    display: block;
+    position: absolute;
+    width: 192px;
+    right: 157px;
+    &::after {
+      position: absolute;
+      width: 12px;
+      height: 8px;
+      content: "";
+      background-image: url('/images/Vector.svg');
+      top: 5px;
+      right: -17px;
+    }
+    }
+    @media (min-width: $desktop-width) {
+    position: relative;
+    width: 220px;
+    right: -131px;
+    }
+}
+.header__navigation-item:nth-child(3) {
+    @media (min-width: $tablet-width) {
+        display: block;
+        position: absolute;
+        width: 89px;
+        right: 19px;
+    &::after {
+      position: absolute;
+      width: 12px;
+      height: 8px;
+      content: "";
+      background-image: url('/images/Vector.svg');
+      top: 5px;
+      right: -17px;
+    }
+    }
+    @media (min-width: $desktop-width) {
+        position: relative;
+        width: 102px;
+        right: -70px;
+    }
 }
 .header__navigation--closed {
     .header__navigation-item:nth-child(2) {
         display: none;
+        @media (min-width: $tablet-width) {
+            display: block;
+        }
     }
     .header__navigation-item:nth-child(3) {
         display: none;
+        @media (min-width: $tablet-width) {
+            display: block;
+        }
     }
 }
 .header__navigation--opened {
@@ -92,6 +185,9 @@
     background-color: $burger-blue;
     right: 51px;
     top: 0;
+    @media (min-width: $tablet-width) {
+        display: none;
+    }
 }
 .header__navigation-toggle-burger {
     width: 18px;
@@ -117,61 +213,3 @@
     top: -6px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-// .header__navigation-list--closed {
-//     @media (max-width: $tablet-width-only) {
-//       .header__navigation-list {
-//         display: none;
-//       }
-//     }
-//   }
-  
-//   .header__navigation--opened {
-//     @media (max-width: $tablet-width-only) {
-//       .header__navigation-list {
-//         flex-direction: column;
-//         align-items: flex-start;
-//         position: absolute;
-//         top: 3px;
-//         right: $padding-mobile;
-//         z-index: 2;
-//         background-color: $white;
-//         padding: 25px;
-//         border-radius: 6px;
-//         box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.25);
-//         font-size: 16px;
-  
-//         @media (min-width: $tablet-width) {
-//           right: $padding-tablet;
-//           top: 3px;
-//           padding: 29px 24px;
-//           padding-right: 43px;
-//         }
-//       }
-  
-//       .header__navigation-burger {
-//         background-color: transparent;
-//       }
-  
-//       .header__navigation-burger::before {
-//         transform: rotate(-45deg);
-//         top: 0;
-//       }
-  
-//       .header__navigation-burger::after {
-//         transform: rotate(45deg);
-//         top: 0;
-//       }
-//     }
-//   }
