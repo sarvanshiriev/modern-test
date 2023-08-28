@@ -1,0 +1,76 @@
+.mail {
+    background-color: $sky;
+}
+.mail__container {
+    width: 320px;
+    padding: 20px $padding-mobile 20px $padding-mobile;
+    margin: 0 auto;
+    @media (min-width: $tablet-width) {
+        width: 768px;
+        padding: 28px $padding-tablet 28px $padding-tablet;
+        margin: 0 auto;
+    }
+    @media (min-width: $desktop-width) {
+        width: 1440px;
+        padding: 28px $padding-desktop 28px $padding-desktop;
+    }
+}
+.mail__container-img {
+    margin: 0 auto 20px auto;
+    width: 80px;
+    height: 80px;
+    @media (min-width: $tablet-width) {
+    width: 104px;
+    height: 104px;
+    content: url('/images/mail-tablet.png'); 
+    margin: 0 30px 0 auto;
+    }
+}
+.mail__container-adress {
+    margin:18px auto 0 0;
+}
+.mail__container-adress h3 {
+    color: #009EE8;
+    text-align: center;
+    font-family: "Arial",sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 175px;
+    margin: 0 auto 10px auto;
+    @media (min-width: $tablet-width) {
+        font-size: 20px;
+        width: 194px;
+        margin: 0 auto 12px 0;
+    }
+    @media (min-width: $desktop-width) {
+        font-size: 22px;
+        width: 214px;
+    }
+}
+.mail__container-adress p {
+    color: $text;
+    text-align: center;
+    font-family: "Arial",sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 256px;
+    margin: 0 auto;
+    @media (min-width: $tablet-width) {
+        font-size: 16px;
+        width: 256px;
+        margin: 0 auto 0 0;
+        text-align: left;
+    }
+    @media (min-width: $desktop-width) {
+        width: 256px;
+    }
+}
+.mail__container {
+    @media (min-width: $tablet-width) {
+        display: flex;
+    }
+}

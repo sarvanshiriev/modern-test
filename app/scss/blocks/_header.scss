@@ -4,11 +4,11 @@
     margin: 0 auto;
     @media (min-width: $tablet-width) {
         width: 768px;
-        padding: 16px $padding-tablet 0 $padding-tablet;
+        padding: 16px $padding-tablet 16px $padding-tablet;
     }
     @media (min-width: $desktop-width) {
-        width: 1920px;
-        padding: 24px $padding-desktop 0 $padding-desktop;
+        width: 1440px;
+        padding: 24px $padding-desktop 24px $padding-desktop;
     }
 }
 .header__navigation {
