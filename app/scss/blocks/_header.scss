@@ -1,8 +1,7 @@
 .header__container {
     width: 320px;
-    padding: 14px $padding-mobile 0 $padding-mobile;
+    padding: 14px $padding-mobile 14px $padding-mobile;
     margin: 0 auto;
-    border: 1px solid red;
     @media (min-width: $tablet-width) {
         width: 768px;
         padding: 16px $padding-tablet 0 $padding-tablet;
