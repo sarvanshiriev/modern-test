@@ -5,9 +5,7 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
 const browserSync = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
-const clean = require('gulp-clean');
-const avif  = require('gulp-avif');
-const webp = require('gulp-webp');
+const clean = require('gulp-clean')
 const imagemin = require('gulp-imagemin');
 const newer = require('gulp-newer');
 const fonter = require('gulp-fonter');
@@ -37,31 +35,17 @@ function fonts () {
 function images() {
     return src(['app/images/src/*.*','!app/images/src/*.svg'])
     .pipe(newer('app/images'))
-    .pipe(avif({quality :50}))
-
-    .pipe(src('app/images/src/*.*'))
-    .pipe(newer('app/images'))
-    .pipe(webp())
-
-    .pipe(src('app/images/src/*.*'))
-    .pipe(newer('app/images'))
     .pipe(imagemin())
-
     .pipe(dest('app/images'))
 }
-function sprite () {
- return src('app/images/*.svg')
- .pipe(svgSprite({
-    mode: {
-        stack: {
-            sprite: '../sprite.svg',
-            example : true
-        }
-    }
- }))
- .pipe(dest('app/images'))
-}
 
+function svgImages() {
+    return src('app/images/src/*.svg')
+        .pipe(newer('app/images')) 
+        .pipe(imagemin()) 
+        .pipe(dest('app/images')); 
+}
+   
 function scripts () {
     return src([
         'app/js/main.js'
@@ -117,9 +101,9 @@ exports.images = images;
 exports.fonts = fonts;
 exports.pages = pages;
 exports.building = building;
-exports.sprite = sprite;
+exports.svgImages = svgImages;
 exports.scripts = scripts;
 exports.watching = watching;
 
 exports.build = series(cleanDist,building);
-exports.default = parallel(styles,images,scripts,pages,watching);
+exports.default = parallel(styles,images,scripts,pages,watching,svgImages);

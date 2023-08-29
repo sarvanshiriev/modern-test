@@ -1,15 +1,14 @@
 .header__container {
     width: 320px;
-    padding: 14px $padding-mobile 0 $padding-mobile;
+    padding: 14px $padding-mobile 14px $padding-mobile;
     margin: 0 auto;
-    border: 1px solid red;
     @media (min-width: $tablet-width) {
         width: 768px;
-        padding: 16px $padding-tablet 0 $padding-tablet;
+        padding: 16px $padding-tablet 16px $padding-tablet;
     }
     @media (min-width: $desktop-width) {
-        width: 1920px;
-        padding: 24px $padding-desktop 0 $padding-desktop;
+        width: 1440px;
+        padding: 24px $padding-desktop 24px $padding-desktop;
     }
 }
 .header__navigation {
@@ -147,21 +146,30 @@
     .header__navigation-item:nth-child(2) {
         display: block;
         position: absolute;
-        width: 165px;
-        height: 15px;
+        width: 185px;
+        height: 25px;
         background-color: $white;
         right: 0;
-        top: 50px;
+        top: 40px;
+        border: 1px solid $grey;
+        text-align: right;
+        border-bottom: transparent;
+        padding: 5px;
+        z-index: 10;
     }
     .header__navigation-item:nth-child(3) {
         display: block;
         position: absolute;
-        top: 70px;
-        width: 165px;
-        height: 15px;
+        top: 63px;
+        width: 185px;
+        height: 25px;
         background-color: $white;
         right: 0;
         text-align: right;
+        border: 1px solid $grey;
+        border-top: transparent;
+        padding: 5px;
+        z-index: 10;
     }
     .header__navigation-toggle-burger {
         background-color: transparent;

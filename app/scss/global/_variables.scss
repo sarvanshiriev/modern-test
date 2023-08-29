@@ -1,7 +1,7 @@
 // Colors
 $blue: #009EE8;
 $sky: #CFEFFF;
-$gradient:linear-gradient(270deg, #E3EEFA 59.35%, rgba(227, 238, 250, 0.00) 100%), linear-gradient(90deg, #E3EEFA 33.22%, rgba(227, 238, 250, 0.00) 100%), url(<path-to-image>), lightgray 333.054px -9.515px / 71.042% 106.479% no-repeat;
+$gradient:#E3EEFA;
 $red: #EF5C53;
 $dark-blue:#0887CC;
 $yellow:#FFF3C4;
@@ -14,7 +14,7 @@ $text:#4D4D4D;
 // Paddings
 $padding-mobile: 17px;
 $padding-tablet: 25px;
-$padding-desktop: 280px;
+$padding-desktop: 40px;
 
 // View-ports
 $mobile-width-only: 767px;
