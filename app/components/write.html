@@ -4,17 +4,17 @@
         <div class="writeus__wrapper">
             <form action="#" method="post" id="form" class="writeus__form">
                 <div class="writeus__form-item">
-                    <label for="formEmail" class="writeus__form-label">Subject<span class="red_dot">*</span>:</label>
-                    <select name="subject" class="writeus__form-select" id="">
-                        <option value="">Select Subject</option>
-                        <option value="1">Building Credit History</option>
-                        <option value="2">Bad Credit</option>
-                        <option value="3">Credit Cards for Business</option>
-                        <option value="4">General</option>
-                        <option value="5">Balance Transfer</option>
-                        <option value="6">Credit Card Rewards</option>
-                        <option value="7">Good Credit</option>
-                    </select>
+                    <p class="writeus__form-title">Subject<span class="star">*</span>:</p>
+                    <div class="writeus__form-select" id="subjectDropdown">Select Subject</div>
+                    <ul class="writeus__form-list" id="subjectOptions">
+                      <li class="writeus__form-list--item" data-value="Building Credit History">Building Credit History</li>
+                      <li class="writeus__form-list--item" data-value="Bad Credit">Bad Credit</li>
+                      <li class="writeus__form-list--item" data-value="Credit Cards for Business">Credit Cards for Business</li>
+                      <li class="writeus__form-list--item" data-value="General">General</li>
+                      <li class="writeus__form-list--item" data-value="Balance Transfer">Balance Transfer</li>
+                      <li class="writeus__form-list--item" data-value="Credit Card Rewards">Credit Card Rewards</li>
+                      <li class="writeus__form-list--item" data-value="Good Credit">Good Credit</li>
+                    </ul>
                 </div>
                 <div class="writeus__form-item">
                     <label for="formEmail" class="writeus__form-label">E-mail<span class="star">*</span>:</label>
@@ -34,7 +34,7 @@
                 </div>
                 <div class="writeus__form-item">
                     <span class="writeus__form-requirements">* required fields</span>
-                    <button type="submit" class="writeus__form-button">SEND</button>
+                    <button type="button" class="writeus__form-button" id="submitButton">SEND</button>
                 </div>
             </form>
         </div>

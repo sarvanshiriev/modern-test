@@ -18,6 +18,7 @@
     }
 }
 .writeus__wrapper {
+    margin-bottom: 20px;
     @media (min-width: $desktop-width) {
     width: 706px;
     }
@@ -38,7 +39,7 @@
         font-size: 22px;
         margin: 0 auto 40px 0;
     }
-    @media (min-width: $tablet-width) {
+    @media (min-width: $desktop-width) {
         width: 118px;
         font-size: 24px;
         margin: 0 auto 60px 0;
@@ -47,13 +48,59 @@
 .writeus__form-label , 
 .writeus__form-requirements ,
 .writeus__info,
- option {
+.writeus__form-title,
+.writeus__form-item,
+option {
     color: $text;
     font-family: "Arial",sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+.writeus__form-title {
+        @media (min-width: $tablet-width) {
+            font-size: 18px;
+            margin-top: 5px;
+        }
+}
+.writeus__form-item:first-child {
+    position: relative;
+}
+.writeus__form-list {
+    width: 287px;
+    padding: 10px 0 10px 0;
+    border: 1px solid $grey;
+    display: none;
+    position: absolute;
+    background-color: $white;
+    @media (min-width: $tablet-width) { 
+    left: 172px;
+    top: 32px;
+    width: 546px;
+    }
+    @media (min-width: $desktop-width) { 
+        left: 160px;
+        top: 32px;
+        width: 546px;
+    }
+
+}
+.writeus__form-list--item {
+    width: 100%;
+    padding: 10px 10px 10px 24px;
+    cursor: pointer;
+    @media (min-width: $tablet-width) { 
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+.writeus__form-list--item:hover {
+    background-color: $blue;
+    color: $white;
+}
+.writeus__form-item:last-child {
+    margin-bottom: 0;
 }
 .writeus__form-label {
     @media (min-width: $tablet-width) {
@@ -62,7 +109,7 @@
     }
 }
 .writeus__form-input,
-.writeus__form-select{
+.writeus__form-select {
     width: 287px;
     height: 32px;
     border: 1px solid $grey;
@@ -73,7 +120,34 @@
         margin: 0;
     }
 }
-
+.writeus__form-select {
+    padding: 8px 10px 8px 10px;
+    color: $grey;
+    font-family: Arial;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    cursor: pointer;
+    @media (min-width: $tablet-width) {
+        font-size: 16px;
+    }
+}
+.writeus__form-select::after  {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    content: url(/images/arrow.svg);
+    background-color: $blue;
+    top: -1px;
+    right: -1px;
+    padding-left: 11px;
+    padding-top: 7px;
+}
+.writeus__form-select.close::after  {
+    transform: rotate(180deg);
+}
 .textarea {
     height: 140px;
 }
@@ -138,4 +212,13 @@
 }
 .writeus__form-select option {
     width: 287px;
+}
+.selected {
+    color: $text;
+}
+.writeus__form-input {
+    padding: 8px 10px 8px 10px;
+}
+.error {
+    border: 1px solid red;
 }
