@@ -1,6 +1,6 @@
 .footer {
     background-color: $brown;
-    background-image: url(/images/src/footer-bg.png);
+    background-image: url(/app/images/src/footer-bg.png);
     position: relative;
 }
 .footer__wrapper {
@@ -131,7 +131,7 @@
 .footer__logo {
     margin-bottom: 43px;
     @media (min-width: $tablet-width) {
-        content: url(/images/logo-footer.png);
+        content: url(/app/images/logo-footer.png);
     }
 }
 .footer__social-list {
