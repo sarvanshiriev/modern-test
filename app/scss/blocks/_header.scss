@@ -146,21 +146,30 @@
     .header__navigation-item:nth-child(2) {
         display: block;
         position: absolute;
-        width: 165px;
-        height: 15px;
+        width: 185px;
+        height: 25px;
         background-color: $white;
         right: 0;
-        top: 50px;
+        top: 40px;
+        border: 1px solid $grey;
+        text-align: right;
+        border-bottom: transparent;
+        padding: 5px;
+        z-index: 10;
     }
     .header__navigation-item:nth-child(3) {
         display: block;
         position: absolute;
-        top: 70px;
-        width: 165px;
-        height: 15px;
+        top: 63px;
+        width: 185px;
+        height: 25px;
         background-color: $white;
         right: 0;
         text-align: right;
+        border: 1px solid $grey;
+        border-top: transparent;
+        padding: 5px;
+        z-index: 10;
     }
     .header__navigation-toggle-burger {
         background-color: transparent;
