@@ -1,29 +1,61 @@
-const form = document.getElementById('form');
-const requiredInputs = document.querySelectorAll('.writeus__form-label');
+document.addEventListener('DOMContentLoaded', function () {
+    let form = document.getElementById('form');
+    let submitButton = document.getElementById('submitButton');
+    let subjectDropdown = document.getElementById('subjectDropdown');
 
-        form.addEventListener('submit', function(event) {
-            let hasError = false;
-            requiredInputs.forEach(input => {
-                const field = input.parentElement.querySelector('.writeus__form-input');
+    submitButton.addEventListener('click', function (event) {
+        let formEmail = document.getElementById('formEmail');
+        let formName = document.getElementById('formName');
+        let question = document.getElementById('question');
 
-                if (field.classList.contains('writeus__form-select')) {
-                    // Для выпадающих дивов, проверяем наличие data-value
-                    const selectedOption = field.querySelector('.writeus__form-list--item[data-value]');
-                    if (!selectedOption || !selectedOption.getAttribute('data-value')) {
-                        field.classList.add('error');
-                        hasError = true;
-                    } else {
-                        field.classList.remove('error');
-                    }
-                } else if (!field.value.trim()) {
-                    field.classList.add('error');
-                    hasError = true;
-                } else {
-                    field.classList.remove('error');
-                }
-            });
+        // Убираем красные рамки и цвет текста со всех полей перед проверкой
+        subjectDropdown.style.border = '';
+        subjectDropdown.style.color = '';
+        formEmail.style.border = '';
+        formName.style.border = '';
+        question.style.border = '';
 
-            if (hasError) {
-                event.preventDefault(); // Предотвращаем отправку формы
-            }
-        });
+        // Проверяем, заполнены ли обязательные поля
+        let hasError = false;
+        if (subjectDropdown.textContent === 'Select Subject') {
+            subjectDropdown.style.border = '1px solid #EF5C53';
+            subjectDropdown.style.color = '#EF5C53'; // Добавляем красный цвет тексту
+            hasError = true;
+        }
+        if (formEmail.value === '') {
+            formEmail.style.border = '1px solid #EF5C53';
+            hasError = true;
+        }
+        if (formName.value === '') {
+            formName.style.border = '1px solid #EF5C53';
+            hasError = true;
+        }
+        if (question.value === '') {
+            question.style.border = '1px solid #EF5C53';
+            hasError = true;
+        }
+
+        if (hasError) {
+            event.preventDefault(); // Отменяем отправку формы
+        }
+    });
+
+    // Добавляем обработчики событий для удаления красного цвета и рамок при вводе текста
+    formEmail.addEventListener('input', function () {
+        formEmail.style.border = '';
+    });
+
+    formName.addEventListener('input', function () {
+        formName.style.border = '';
+    });
+
+    question.addEventListener('input', function () {
+        question.style.border = '';
+    });
+
+    // Используем событие change для выпадающего списка
+    subjectDropdown.addEventListener('click', function () {
+        subjectDropdown.style.border = '';
+        subjectDropdown.style.color = '';
+    });
+});

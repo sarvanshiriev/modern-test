@@ -11,11 +11,17 @@
 }
 .pop-up__wrapper::after {
     width: 27px;
-    width: 27px;
+    height: 27px;
     content: url(/images/close.svg);
     background-color: #FFCF30;
     top: 0;
     right: 0;
+    display: block;
+    position: absolute;
+    padding: 6px;
+    @media (min-width: $tablet-width) {
+        right: -27px;
+    }
 }
 .pop-up__title {
     color: $red;

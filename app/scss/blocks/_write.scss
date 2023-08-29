@@ -151,6 +151,9 @@ option {
 .textarea {
     height: 140px;
 }
+.textarea:focus {
+    outline: none;
+}
 .star {
     color: $red;
 }
