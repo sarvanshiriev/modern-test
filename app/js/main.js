@@ -12,3 +12,13 @@ navToggle.addEventListener('click', () => {
     navMain.classList.remove('header__navigation--opened');
   }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  var select = document.getElementById("subjectSelect");
+  select.addEventListener("change", function() {
+      var selectSubjectOption = this.querySelector('option[value=""]');
+      if (selectSubjectOption) {
+          selectSubjectOption.style.display = "none";
+      }
+  });
+});
