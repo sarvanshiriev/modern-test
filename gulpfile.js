@@ -18,7 +18,7 @@ function pages () {
     .pipe(include({
         includePaths: 'app/components'
     }))
-    .pipe(dest('app'))
+    .pipe(dest('.'))
     .pipe(browserSync.stream())
 }
 
