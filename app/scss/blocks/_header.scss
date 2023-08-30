@@ -24,6 +24,7 @@
 .header__navigation-image {
     width: 168px;
     height: 32px;
+    content: url("app\images\logo-mobile.jpg"); 
     @media (min-width: $tablet-width) {
     content: url("app\images\logo-tablet.jpeg"); 
     width: 205px;
