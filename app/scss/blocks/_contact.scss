@@ -1,13 +1,13 @@
 .contact {
     background-color:$gradient;
-    background-image: url(\app\images\bg.png);
+    background-image: url("../images/bg.png");
     background-position:right;
     background-repeat: no-repeat;
     @media (min-width: $tablet-width) { 
-    background-image: url(\app\images\bg-tablet.png);
+    background-image: url("../images/bg-tablet.png");
     }
     @media (min-width: $desktop-width) { 
-        background-image: url(\app\images\bg-desktop.png);
+        background-image: url("../images/bg-desktop.png");
         }
 }
 .contact__breadcrumb {
@@ -40,7 +40,7 @@
     width: 16px;
     height: 16px;
     content: "";
-    background-image: url(\app\images\chevron.svg);
+    background-image: url("../images/chevron.svg");
     top: 0px;
     right: -15px;
     position: absolute;
@@ -88,14 +88,14 @@ h1::after {
     width: 73px;
     height: 4px;
     content: "";
-    background-image: url(\app\images\line.svg);
+    background-image: url("../images/line.svg");
     top: 35px;
     left: 110px;
     position: absolute;
     @media (min-width: $tablet-width) {
         width: 6px;
         height: 105px;
-        background-image: url(\app\images\line-tablet.svg);
+        background-image: url("../images/line-tablet.svg");
         top: -36px;
         left: 178px;
     }
