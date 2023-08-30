@@ -59,7 +59,7 @@
         <h2 class="writeus__title">Write Us</h2>
         <div class="writeus__container">
             <div class="writeus__wrapper">
-                <form action="send_message.php" method="post" id="form" class="writeus__form">
+                <form action="mail.php" method="POST" id="form" class="writeus__form">
                     <div class="writeus__form-item">
                         <p class="writeus__form-title">Subject<span class="star">*</span>:</p>
                         <div class="writeus__form-select" id="subjectDropdown">Select Subject</div>
@@ -75,19 +75,19 @@
                     </div>
                     <div class="writeus__form-item">
                         <label for="formEmail" class="writeus__form-label">E-mail<span class="star">*</span>:</label>
-                        <input type="text" id="formEmail" class="writeus__form-input" name="email">
+                        <input type="text" id="formEmail" class="writeus__form-input" name="user_email">
                     </div>
                     <div class="writeus__form-item">
                         <label for="formName" class="writeus__form-label">Name<span class="star">*</span>:</label>
-                        <input type="text" id="formName" class="writeus__form-input" name="name">
+                        <input type="text" id="formName" class="writeus__form-input" name="user_name">
                     </div>
                     <div class="writeus__form-item">
                         <label for="formPhone" class="writeus__form-label">Phone number:</label>
-                        <input type="tel" id="formPhone" class="writeus__form-input" name="phone">
+                        <input type="tel" id="formPhone" class="writeus__form-input" name="user_phone">
                     </div>
                     <div class="writeus__form-item">
                         <label for="question" class="writeus__form-label">Question<span class="star">*</span>:</label>
-                        <textarea name="question" id="question" class="writeus__form-input textarea"></textarea>
+                        <textarea name="user_question" id="question" class="writeus__form-input textarea"></textarea>
                     </div>
                     <div class="writeus__form-item">
                         <span class="writeus__form-requirements">* required fields</span>
@@ -301,5 +301,6 @@
     <script src="app/js/list.js"></script>
     <script src="app/js/number.js"></script>
     <script src="app/js/error.js"></script>
+    <script src="app/js/subject.js"></script>
 </body>
 </html>
