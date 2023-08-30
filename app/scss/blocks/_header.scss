@@ -24,14 +24,13 @@
 .header__navigation-image {
     width: 168px;
     height: 32px;
-    content: url('app/images/logo-mobile.jpg'); 
     @media (min-width: $tablet-width) {
-    content: url('app/images/logo-tablet.jpeg'); 
+    content: url('/app/images/logo-tablet.jpeg'); 
     width: 205px;
     height: 57px;   
     }
     @media (min-width: $desktop-width) {
-    content: url('app/images/logo-desktop.png');
+    content: url('/app/images/logo-desktop.png');
     width: 408px;
     height: 49px; 
     }
@@ -95,7 +94,7 @@
       width: 12px;
       height: 8px;
       content: "";
-      background-image: url('app/images/Vector.svg');
+      background-image: url('/app/images/Vector.svg');
       top: 5px;
       right: -17px;
     }
@@ -117,7 +116,7 @@
       width: 12px;
       height: 8px;
       content: "";
-      background-image: url('app/images/Vector.svg');
+      background-image: url('/app/images/Vector.svg');
       top: 5px;
       right: -17px;
     }
