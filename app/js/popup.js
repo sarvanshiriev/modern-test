@@ -1,6 +1,12 @@
 const popup = document.getElementById("popup");
 const closeButton = document.getElementById("closePopup");
 
+function openPopup() {
+  popup.style.display = "block";
+  setTimeout(function() {
+    popup.style.display = "none";
+  }, 3000);
+}
 // Обработчик для закрытия попапа при клике в любом месте кроме попапа
 document.addEventListener("click", function(event) {
   if (event.target !== popup) {
@@ -14,12 +20,6 @@ popup.addEventListener("click", function(event) {
 });
 
 // Функция для открытия попапа
-function openPopup() {
-  popup.style.display = "block";
-  setTimeout(function() {
-    popup.style.display = "none";
-  }, 3000);
-}
 // Обработчик для закрытия попапа при клике на кнопку закрытия
 closeButton.addEventListener("click", function() {
   popup.style.display = "none";

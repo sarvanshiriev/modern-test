@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 
 $mail->isSMTP();                                   
-$mail->Host = 'smtp.mail.ru';  																							// Specify main and backup SMTP servers
+$mail->Host = 'smtp.mail.ru';  																						
 $mail->SMTPAuth = true;                             
 $mail->Username = 'moderntest@mail.ru'; 
 $mail->Password = '36JwAimrfi5bQmfg6wyL';
@@ -35,7 +35,7 @@ $mail->AltBody = '';
 if(!$mail->send()) {
     echo 'Error';
 } else {
-    echo '<script src="popup.js"></script>';
+    echo '<script src="app/js/popup.js"></script>';
     echo '<script>openPopup();</script>';
 }
 ?>
