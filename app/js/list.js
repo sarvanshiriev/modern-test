@@ -22,6 +22,12 @@ writeusFormSelect.addEventListener("click", toggleSubjectOptions);
 
 // Функция для выбора элемента из списка
 function selectSubject(subject) {
+  const selectedSubjectInput = document.getElementById("selectedSubject");
+  const selectedValue = subject.getAttribute("data-value");
+
+  // Устанавливаем значение в скрытый input
+  selectedSubjectInput.value = selectedValue;
+
   writeusFormSelect.textContent = subject.textContent;
   writeusFormList.style.display = "none";
   writeusFormSelect.classList.add("selected");

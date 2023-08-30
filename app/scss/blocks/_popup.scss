@@ -1,3 +1,10 @@
+.pop-up {
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 .pop-up__wrapper {
     width: 320px;
     padding: 30px $padding-mobile 30px $padding-mobile;
@@ -9,7 +16,7 @@
         padding: 38px $padding-tablet 38px $padding-tablet;
     }
 }
-.pop-up__wrapper::after {
+.pop-up__close-button {
     width: 27px;
     height: 27px;
     content: url("../images/close.svg");

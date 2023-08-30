@@ -6,7 +6,7 @@ $mail->CharSet = 'utf-8';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Получаем значение из POST-запроса
-    $selectedValue = $_POST["selectedValue"];
+    $subject = $_POST['user_subject'];
     $email = $_POST['user_email'];
     $name = $_POST['user_name'];
     $phone = $_POST['user_phone'];
@@ -25,7 +25,7 @@ $mail->setFrom('moderntest@mail.ru');
 $mail->addAddress('sarvan.shiriev@mail.ru');
 $mail->isHTML(true);  
 
-$mail->Subject = 'Question from DreamCreditMaker:'.$selectedValue;
+$mail->Subject = 'Question from DreamCreditMaker:'.$subject;
 $mail->Body    = 'Email:'.$email.
 '<br>Name:'.$name.
 '<br>Question:'.$question.
@@ -35,6 +35,7 @@ $mail->AltBody = '';
 if(!$mail->send()) {
     echo 'Error';
 } else {
-    header('location: app/components/popup.html');
+    echo '<script src="popup.js"></script>';
+    echo '<script>openPopup();</script>';
 }
 ?>

@@ -6,6 +6,7 @@
                 <div class="writeus__form-item">
                     <p class="writeus__form-title">Subject<span class="star">*</span>:</p>
                     <div class="writeus__form-select" id="subjectDropdown">Select Subject</div>
+                    <input class="hidden-input" type="hidden" id="selectedSubject" name="user_subject">
                     <ul class="writeus__form-list" id="subjectOptions">
                       <li class="writeus__form-list--item" data-value="Building Credit History">Building Credit History</li>
                       <li class="writeus__form-list--item" data-value="Bad Credit">Bad Credit</li>
@@ -51,4 +52,11 @@
             </p>
         </div>
     </div>
+    <div class="pop-up" id="popup">
+        <div class="pop-up__wrapper">
+          <h3 class="pop-up__title">Thanks for your question!</h3>
+          <p class="pop-up__text">Our experts will reply you by email as soon as possible.</p>
+          <span class="pop-up__close-button" id="closePopup">Закрыть</span>
+        </div>
+      </div>
 </section>

@@ -57,12 +57,14 @@
         </section>
     <section class="writeus">
         <h2 class="writeus__title">Write Us</h2>
+        <button id="openPopup">Открыть попап</button>
         <div class="writeus__container">
             <div class="writeus__wrapper">
-                <form action="mail.php" method="POST" id="form" class="writeus__form">
+                <form action="process_form.php" method="post" id="form" class="writeus__form">
                     <div class="writeus__form-item">
                         <p class="writeus__form-title">Subject<span class="star">*</span>:</p>
                         <div class="writeus__form-select" id="subjectDropdown">Select Subject</div>
+                        <input class="hidden-input" type="hidden" id="selectedSubject" name="user_subject">
                         <ul class="writeus__form-list" id="subjectOptions">
                           <li class="writeus__form-list--item" data-value="Building Credit History">Building Credit History</li>
                           <li class="writeus__form-list--item" data-value="Bad Credit">Bad Credit</li>
@@ -75,19 +77,19 @@
                     </div>
                     <div class="writeus__form-item">
                         <label for="formEmail" class="writeus__form-label">E-mail<span class="star">*</span>:</label>
-                        <input type="text" id="formEmail" class="writeus__form-input" name="user_email">
+                        <input type="text" id="formEmail" class="writeus__form-input" name="email">
                     </div>
                     <div class="writeus__form-item">
                         <label for="formName" class="writeus__form-label">Name<span class="star">*</span>:</label>
-                        <input type="text" id="formName" class="writeus__form-input" name="user_name">
+                        <input type="text" id="formName" class="writeus__form-input" name="name">
                     </div>
                     <div class="writeus__form-item">
                         <label for="formPhone" class="writeus__form-label">Phone number:</label>
-                        <input type="tel" id="formPhone" class="writeus__form-input" name="user_phone">
+                        <input type="tel" id="formPhone" class="writeus__form-input" name="phone">
                     </div>
                     <div class="writeus__form-item">
                         <label for="question" class="writeus__form-label">Question<span class="star">*</span>:</label>
-                        <textarea name="user_question" id="question" class="writeus__form-input textarea"></textarea>
+                        <textarea name="question" id="question" class="writeus__form-input textarea"></textarea>
                     </div>
                     <div class="writeus__form-item">
                         <span class="writeus__form-requirements">* required fields</span>
@@ -108,6 +110,13 @@
                 </p>
             </div>
         </div>
+        <div class="pop-up" id="popup">
+            <div class="pop-up__wrapper">
+              <h3 class="pop-up__title">Thanks for your question!</h3>
+              <p class="pop-up__text">Our experts will reply you by email as soon as possible.</p>
+              <span class="pop-up__close-button" id="closePopup">Закрыть</span>
+            </div>
+          </div>
     </section>
     <section class="mail">
         <div class="mail__container">
@@ -302,5 +311,6 @@
     <script src="app/js/number.js"></script>
     <script src="app/js/error.js"></script>
     <script src="app/js/subject.js"></script>
+    <script src="app/js/popup.js"></script>
 </body>
 </html>
