@@ -2,13 +2,14 @@ const popup = document.getElementById("popup");
 const closeButton = document.getElementById("closePopup");
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const successParam = urlParams.get('success');
+let successParam = urlParams.get('success');
 
 if (successParam === "true") {
   openPopup();
   setTimeout(() => {
     popup.classList.add("hide-popup");
-  }, 3000); 
+    resetSuccessParam();
+  }, 3000);
 }
 
 function openPopup() {
@@ -18,6 +19,7 @@ function openPopup() {
 document.addEventListener("click", function(event) {
   if (event.target !== popup) {
     popup.classList.add("hide-popup");
+    resetSuccessParam(); 
   }
 });
 
@@ -27,7 +29,10 @@ popup.addEventListener("click", function(event) {
 
 closeButton.addEventListener("click", function() {
   popup.classList.add("hide-popup");
+  resetSuccessParam();
 });
 
-
-
+function resetSuccessParam() {
+  successParam = "false";
+  window.history.replaceState({}, document.title, window.location.pathname);
+}
