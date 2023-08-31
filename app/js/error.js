@@ -8,18 +8,16 @@ document.addEventListener('DOMContentLoaded', function () {
         let formName = document.getElementById('formName');
         let question = document.getElementById('question');
 
-        // Убираем красные рамки и цвет текста со всех полей перед проверкой
         subjectDropdown.style.border = '';
         subjectDropdown.style.color = '';
         formEmail.style.border = '';
         formName.style.border = '';
         question.style.border = '';
 
-        // Проверяем, заполнены ли обязательные поля
         let hasError = false;
         if (subjectDropdown.textContent === 'Select Subject') {
             subjectDropdown.style.border = '1px solid #EF5C53';
-            subjectDropdown.style.color = '#EF5C53'; // Добавляем красный цвет тексту
+            subjectDropdown.style.color = '#EF5C53';
             hasError = true;
         }
         if (formEmail.value === '') {
@@ -36,11 +34,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         if (hasError) {
-            event.preventDefault(); // Отменяем отправку формы
+            event.preventDefault();
         }
     });
 
-    // Добавляем обработчики событий для удаления красного цвета и рамок при вводе текста
     formEmail.addEventListener('input', function () {
         formEmail.style.border = '';
     });
@@ -53,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
         question.style.border = '';
     });
 
-    // Используем событие change для выпадающего списка
     subjectDropdown.addEventListener('click', function () {
         subjectDropdown.style.border = '';
         subjectDropdown.style.color = '';

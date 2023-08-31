@@ -2,6 +2,7 @@
     width: 320px;
     padding: 30px $padding-mobile 30px $padding-mobile;
     margin: 0 auto;
+    position: relative;
     @media (min-width: $tablet-width) {
         width: 768px;
         padding: 40px $padding-tablet 40px $padding-tablet;
@@ -87,12 +88,20 @@ option {
 
 }
 .writeus__form-list--item {
+    color: $text;
+    font-family: "Arial",sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
     width: 100%;
     padding: 10px 10px 10px 24px;
     cursor: pointer;
     @media (min-width: $tablet-width) { 
         font-size: 16px;
         padding: 10px;
+    }
+    @media (min-width: $desktop-width) { 
+        font-size: 18px;
     }
 }
 .writeus__form-list--item:hover {
@@ -224,4 +233,7 @@ option {
 }
 .error {
     border: 1px solid red;
+}
+.hidden-input {
+    display: none;
 }
