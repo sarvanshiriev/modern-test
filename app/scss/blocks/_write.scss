@@ -159,6 +159,7 @@ option {
 }
 .textarea {
     height: 140px;
+    resize: none;
 }
 .textarea:focus {
     outline: none;
