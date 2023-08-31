@@ -1,4 +1,7 @@
 <?php 
+header("Cache-Control: no-cache, no-store, must-revalidate"); // HTTP 1.1.
+header("Pragma: no-cache"); // HTTP 1.0.
+header("Expires: 0");
 
 require_once('phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
@@ -35,7 +38,6 @@ $mail->AltBody = '';
 if(!$mail->send()) {
     echo 'Error';
 } else {
-    echo '<script src="app/js/popup.js"></script>';
-    echo '<script>openPopup();</script>';
+    header("Location: ".$_SERVER['HTTP_REFERER']."?success=true");
 }
 ?>
