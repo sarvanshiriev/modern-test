@@ -8,7 +8,6 @@ $mail = new PHPMailer;
 $mail->CharSet = 'utf-8';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Получаем значение из POST-запроса
     $subject = $_POST['user_subject'];
     $email = $_POST['user_email'];
     $name = $_POST['user_name'];
@@ -21,11 +20,11 @@ $mail->Host = 'smtp.mail.ru';
 $mail->SMTPAuth = true;                             
 $mail->Username = 'moderntest@mail.ru'; 
 $mail->Password = '36JwAimrfi5bQmfg6wyL';
-$mail->SMTPSecure = 'ssl';  
+$mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
 
 $mail->setFrom('moderntest@mail.ru'); 
-$mail->addAddress('sarvan.shiriev@mail.ru');
+$mail->addAddress('resume@000-modern.ru');
 $mail->isHTML(true);  
 
 $mail->Subject = 'Question from DreamCreditMaker:'.$subject;
