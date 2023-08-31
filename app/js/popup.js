@@ -1,30 +1,38 @@
 const popup = document.getElementById("popup");
 const closeButton = document.getElementById("closePopup");
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+let successParam = urlParams.get('success');
 
-function openPopup() {
-  popup.style.display = "block";
-  setTimeout(function() {
-    popup.style.display = "none";
+if (successParam === "true") {
+  openPopup();
+  setTimeout(() => {
+    popup.classList.add("hide-popup");
+    resetSuccessParam();
   }, 3000);
 }
-// Обработчик для закрытия попапа при клике в любом месте кроме попапа
+
+function openPopup() {
+  popup.classList.remove("hide-popup");
+}
+
 document.addEventListener("click", function(event) {
   if (event.target !== popup) {
-    popup.style.display = "none";
+    popup.classList.add("hide-popup");
+    resetSuccessParam(); 
   }
 });
 
-// Остановить всплытие события клика из попапа
 popup.addEventListener("click", function(event) {
   event.stopPropagation();
 });
 
-// Функция для открытия попапа
-// Обработчик для закрытия попапа при клике на кнопку закрытия
 closeButton.addEventListener("click", function() {
-  popup.style.display = "none";
+  popup.classList.add("hide-popup");
+  resetSuccessParam();
 });
 
-
-
-
+function resetSuccessParam() {
+  successParam = "false";
+  window.history.replaceState({}, document.title, window.location.pathname);
+}
